@@ -26,6 +26,10 @@ public:
 
 	void QuickSort(SqList &l_Data);
 
+
+	//print Data
+	void printData();
+
 public:
 
 	SqList *m_Data2Sort;

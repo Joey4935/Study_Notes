@@ -5,6 +5,8 @@ SqList::SqList()
 	r = nullptr;
 	length = 0;
 	strcpy(name, "NULL");
+
+	Init();
 }
 
 SqList::SqList(const SqList & b)
@@ -12,6 +14,7 @@ SqList::SqList(const SqList & b)
 	length = b.length;
 	r = new int[length];
 	memcpy(r, b.r, sizeof(int) * length);
+	
 }
 
 SqList::SqList(const int * b, int len, char *l_pName)
@@ -92,6 +95,11 @@ SqList &SqList::operator=(const SqList & b)
 	}
 }
 
+void SqList::Init()
+{
+	makeDate(100,0,100);
+}
+
 void SqList::setData(const int *b, int len)
 {
 	if (r != nullptr)
@@ -100,4 +108,25 @@ void SqList::setData(const int *b, int len)
 	}
 	r = new int[len];
 	memcpy(r, b, sizeof(int) * len);
+}
+
+void SqList::makeDate(int len, int begin, int end)
+{
+	if (end < begin)
+	{
+		return;
+	}
+	if (len != length)
+	{
+		delete []r;
+		r = new int[len];
+	}
+	length = len;
+	srand(time(NULL));
+	for (int i = 0; i < len; i++)
+	{
+		r[i] = begin + (int)end*rand() / (RAND_MAX + 1);
+		//std::cout << r[i] << std::endl;
+	}
+	return;
 }

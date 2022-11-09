@@ -4,6 +4,7 @@ SortAlgorithm::SortAlgorithm()
 {
 	m_Data2Sort = nullptr;
 	m_DataSorted = nullptr;
+	InitData();
 }
 
 SortAlgorithm::~SortAlgorithm()
@@ -33,6 +34,8 @@ void SortAlgorithm::StraightInsertionSort(SqList & l_Data)
 		if (l_Data.r[i] < l_Data.r[i - 1])
 		{
 			tmp = l_Data.r[i];
+
+
 			int j = 0;
 			for (j = i - 1; tmp < l_Data.r[j]; --j)
 			{
@@ -41,6 +44,7 @@ void SortAlgorithm::StraightInsertionSort(SqList & l_Data)
 			l_Data.r[j + 1] = l_Data.r[0];
 		}
 	}
+	return;
 }
 
 //shellsort
@@ -73,5 +77,15 @@ void SortAlgorithm::ShellInsert(SqList & l_Data, int d)
 			l_Data.r[j + d] = tmp;    //插入到正确位置
 		}
 	}
+}
+
+void SortAlgorithm::printData()
+{
+	for (int i = 0; i < m_Data2Sort->length; i++)
+	{
+		std::cout << m_Data2Sort->r[i] << std::endl;
+	}
+	std::cout << "  "<< std::endl;
+	return;
 }
 

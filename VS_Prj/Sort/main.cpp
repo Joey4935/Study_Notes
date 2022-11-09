@@ -1,8 +1,17 @@
 #include "Sort_DataStruct.h"
+#include "SortAlgorithm.h"
 
 
 int main(void)
 {
+	SortAlgorithm test_class;
+
+	test_class.printData();
+
+	test_class.StraightInsertionSort(*test_class.m_Data2Sort);
+
+	test_class.printData();
+
 	int a[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	int b[10] = { 11,12,13,14,15,16,17,18,19,20 };
 
@@ -19,16 +28,17 @@ int main(void)
 	char name_02[255] = "SqList_02";
 
 	SqList l_a = SqList(a, 10, name_01);
-
-
-
-
+	
 	l_a.setData(b, 10);
 
+	l_a.makeDate(20, 100, 200);
+	std::cout << " " << std::endl;
 
-
-
-
+	for (int i = 0; i < l_a.length; i++)
+	{
+		std::cout << l_a.r[i] << std::endl;
+	}
+	
 	SqList l_b = SqList(b, 10, name_02);
 
 	std::cout << " " << std::endl;
