@@ -28,7 +28,6 @@ SqList::SqList(const int * b, int len, char *l_pName)
 	{
 		strcpy(this->name, l_pName);
 	}
-
 }
 
 SqList::~SqList()
@@ -46,25 +45,6 @@ SqList &SqList::operator+(const SqList &b)
 	newSqList->r = new int[newSqList->length];
 	memcpy(newSqList->r, this->r, sizeof(int)*length);
 	memcpy(&newSqList->r[length], b.r, sizeof(int)*b.length);
-	return *newSqList;
-}
-
-SqList & SqList::operator+(const int a[])
-{
-	//int *l_pA = new int;
-	//memcpy(l_pA,a,sizeof(int *));
-	int len = 0;
-	int tmp_01 = sizeof(a);
-	int tmp_02 = sizeof(a[0]);
-	len = sizeof(a) / sizeof(a[0]);
-
-
-	char name[255] = "+temp";
-	SqList *newSqList = new SqList(nullptr, 0, name);
-	newSqList->length = this->length + len;
-	newSqList->r = new int[newSqList->length];
-	memcpy(newSqList->r, this->r, sizeof(int)*length);
-	memcpy(&newSqList->r[length], a, sizeof(int)*len);
 	return *newSqList;
 }
 
@@ -110,4 +90,14 @@ SqList &SqList::operator=(const SqList & b)
 		memcpy(r, b.r, sizeof(int) * length);
 		return *this;
 	}
+}
+
+void SqList::setData(const int *b, int len)
+{
+	if (r != nullptr)
+	{
+		delete[] r;
+	}
+	r = new int[len];
+	memcpy(r, b, sizeof(int) * len);
 }

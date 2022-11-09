@@ -19,11 +19,19 @@ int main(void)
 	char name_02[255] = "SqList_02";
 
 	SqList l_a = SqList(a, 10, name_01);
+
+
+
+
+	l_a.setData(b, 10);
+
+
+
+
+
 	SqList l_b = SqList(b, 10, name_02);
 
 	std::cout << " " << std::endl;
-
-	l_a = l_a + a;
 
 	l_a += l_b;
 	

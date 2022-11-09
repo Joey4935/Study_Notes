@@ -16,6 +16,17 @@ public:
 	SqList  &operator+=(SqList &b);
 	SqList  &operator=(const SqList &b);
 
+
+	//设置数据
+
+	void setData(const int *b, int len);
+
+
+public:
+	//生成随机数
+	//长度
+	//取值范围
+	//有序无序
 public:
 	int *r;		//基址 ，建表时按实际值分配
 	int length;	//表长

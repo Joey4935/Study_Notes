@@ -13,27 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="InsertionSort">
-      <UniqueIdentifier>{b6782ec7-22b6-409b-bbcf-440a854a9880}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="InsertionSort\StraightInsertionSort">
-      <UniqueIdentifier>{21544055-1d02-4911-a55b-97b5b652db84}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="InsertionSort\ShellSort">
-      <UniqueIdentifier>{400e766a-94d2-49cf-a387-3b7ec91d6e94}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StraightInsertionSort.cpp">
-      <Filter>InsertionSort\StraightInsertionSort</Filter>
-    </ClCompile>
-    <ClCompile Include="ShellSort.cpp">
-      <Filter>InsertionSort\ShellSort</Filter>
-    </ClCompile>
     <ClCompile Include="Sort_DataStruct.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SortAlgorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,11 +29,8 @@
     <ClInclude Include="Sort_DataStruct.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StraightInsertionSort.h">
-      <Filter>InsertionSort\StraightInsertionSort</Filter>
-    </ClInclude>
-    <ClInclude Include="ShellSort.h">
-      <Filter>InsertionSort\ShellSort</Filter>
+    <ClInclude Include="SortAlgorithm.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
