@@ -8,7 +8,9 @@ int main(void)
 
 	test_class.printData();
 
-	test_class.StraightInsertionSort(*test_class.m_Data2Sort);
+	test_class.BubbleSort(*test_class.m_Data2Sort);
+	//test_class.StraightInsertionSort();
+	//test_class.ShellSort(*test_class.m_Data2Sort);
 
 	test_class.printData();
 

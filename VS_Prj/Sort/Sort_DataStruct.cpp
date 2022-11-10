@@ -97,7 +97,7 @@ SqList &SqList::operator=(const SqList & b)
 
 void SqList::Init()
 {
-	makeDate(100,0,100);
+	makeDate(10,0,10);
 }
 
 void SqList::setData(const int *b, int len)
